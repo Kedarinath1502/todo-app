@@ -6,8 +6,7 @@ import Input from './components/Input.jsx'
 import { useState, useEffect } from 'react'
 function App() {
   const [todos, setTodos] = useState([
-    {input : "this is task 1", completed : false},
-     {input : "this is task 2", completed : true}
+    {input : "Delete this task and start adding your own tasks", completed : false}
   ])
   const [selectedTab, setSelectedTab] = useState('open')
 
