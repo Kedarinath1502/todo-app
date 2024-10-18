@@ -23,7 +23,7 @@ const Input = (props) => {
                     return }
                 handleAddTodo(input)
                 setInput('')
-            }}>Add todo</button>
+            }}>Add your Task</button>
         </div>
     );
 }
