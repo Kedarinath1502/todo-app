@@ -5,7 +5,8 @@ const Input = (props) => {
   
     return (
         <div className="input-container">
-            <input value={input} className="input" onChange = {(e) => {
+            <input id="input" name="inputbox"  value={input} className="input" 
+            onChange = {(e) => {
                 setInput(e.target.value)
             }} placeholder="Enter your todo" type="text" />
             <button className="submit-button" onClick={() => {
