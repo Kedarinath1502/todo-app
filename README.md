@@ -1,4 +1,3 @@
-```markdown
 # YourTaskList
 
 [YourTaskList](https://yourtasklist.vercel.app) is a modern task management web application built with Vite and React. This app allows users to manage their daily tasks effortlessly, providing a user-friendly interface to add, update, and remove tasks, ensuring you stay organized and productive.
@@ -55,6 +54,6 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## Author
 
-Venkat Sai Kedari Nath Gandham 
-[Your GitHub Profile](https://github.com/Kedarinath1502)
-```
+Venkat Sai Kedari Nath Gandham - 
+[my GitHub Profile](https://github.com/Kedarinath1502)
+
