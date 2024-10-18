@@ -5,11 +5,11 @@ function TodoCard (props){
         <div className="card">
             <div>
             {todo.input}
-                <button onClick={()=>{
+               {!todo.completed? <button onClick={()=>{
                     updateTodo(todoIndex)
-                }} className="edit-buttons"> 
+                }} disabled={todo.completed} className="edit-buttons"> 
                     Done
-                </button>
+                </button> : null}
                 <button onClick={()=> {
                     deleteTodo(todoIndex)
                 }} className="edit-buttons">

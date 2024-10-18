@@ -1,8 +1,7 @@
 import { useState } from 'react'
 const Input = (props) => {
-    const {handleAddTodo} = props
+    const {handleAddTodo, todos} = props
     const [input, setInput] = useState('')
-    console.log(input)
   
     return (
         <div className="input-container">
@@ -10,8 +9,17 @@ const Input = (props) => {
                 setInput(e.target.value)
             }} placeholder="Enter your todo" type="text" />
             <button className="submit-button" onClick={() => {
-                console.log("hi")
                 if (!input) { return }
+                let duplicate = false
+                {todos.map((todo, todoIndex)=>{
+                    if(todo.input === input){
+                        alert('todo already exist')
+                        duplicate = true
+                    }
+                })}
+                if(duplicate) { 
+                    setInput('')
+                    return }
                 handleAddTodo(input)
                 setInput('')
             }}>Add todo</button>
