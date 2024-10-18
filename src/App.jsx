@@ -12,17 +12,36 @@ function App() {
 //     {input : "this is task 4", completed : false}
 // ]
   const [todos, setTodos] = useState([
-    {input : "this is task 1", completed : false}
+    {input : "this is task 1", completed : false},
+     {input : "this is task 2", completed : true}
   ])
+  const [selectedTab, setSelectedTab] = useState('open')
+  console.log(selectedTab)
+
   function handleAddTodo(newTask) {
     const newTodoList = [...todos, {input: newTask, completed:false}]
     setTodos(newTodoList)
   }
+
+  function updateTodo(index) {
+      let updatedTodoList = [...todos]
+      updatedTodoList[index]['completed'] = true
+      setTodos(updatedTodoList)
+  }
+
+  function deleteTodo(index) {
+    let modifiedTodoList = [...todos]
+    modifiedTodoList = modifiedTodoList.filter((val,valIndex)=>{ return valIndex !== index})
+    setTodos(modifiedTodoList)
+    
+  }
+
   return (
     <>
       <Header todos={todos}/>
-      <Tabs  todos={todos}/>
-      <TodoList todos={todos}/>
+      <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} todos={todos}/>
+      <TodoList updateTodo={updateTodo} selectedTab={selectedTab}
+        deleteTodo={ deleteTodo} setSelectedTab={setSelectedTab} todos={todos}/>
       <Input handleAddTodo={handleAddTodo} />
     </>
   )
